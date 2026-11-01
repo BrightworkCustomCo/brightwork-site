@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brightwork Custom Co. · Custom engraved awards, signage and keepsakes</title>
+<meta name="description" content="Custom engraved awards, event signage and lit keepsakes, designed with you and made to order.">
+<link rel="icon" href="assets/seal.svg" type="image/svg+xml">
+<meta property="og:title" content="Brightwork Custom Co.">
+<meta property="og:description" content="Custom engraved awards, event signage and lit keepsakes, made to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --navy: #1C2733;
+    --teak: #A8622A;
+    --teak-dark: #8A4F20;
+    --sail: #F4EFE6;
+    --paper: #FBF8F3;
+    --line: #E2DACB;
+    --muted: #55606C;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--navy);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  a { color: var(--teak-dark); }
+  a:hover { color: var(--navy); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; line-height: 1.15; margin: 0; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--teak-dark); margin: 0 0 12px; }
+
+  header.top { padding: 22px 0; border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  header.top img { height: 60px; width: auto; display: block; }
+  .btn {
+    display: inline-block; background: var(--navy); color: var(--sail); text-decoration: none;
+    font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 999px; border: 0; cursor: pointer;
+    min-height: 44px; font-family: inherit;
+  }
+  .btn:hover { background: var(--teak-dark); color: #fff; }
+
+  .hero { padding: 88px 0 72px; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(38px, 6vw, 60px); letter-spacing: -0.5px; }
+  .hero p.lede { font-size: 19px; color: var(--muted); margin: 20px 0 32px; max-width: 34em; }
+  .hero .seal { width: 100%; max-width: 320px; justify-self: center; }
+
+  section { padding: 72px 0; border-top: 1px solid var(--line); }
+  section h2 { font-size: clamp(30px, 4vw, 40px); margin-bottom: 36px; }
+
+  .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px 22px; }
+  .card h3 { font-size: 22px; margin-bottom: 8px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .glint { width: 22px; height: 22px; display: block; margin-bottom: 16px; }
+
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; counter-reset: step; }
+  .steps li { counter-increment: step; }
+  .steps li::before {
+    content: counter(step); display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--sail);
+    font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px; margin-bottom: 14px;
+  }
+  .steps h3 { font-size: 21px; margin-bottom: 6px; }
+  .steps p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  .inquire .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 56px; }
+  .inquire p.side { color: var(--muted); margin: 0 0 16px; }
+  form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  form .full { grid-column: 1 / -1; }
+  label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+  input, select, textarea {
+    width: 100%; font: inherit; font-size: 16px; color: var(--navy); background: #fff;
+    border: 1px solid #C9BFAE; border-radius: 10px; padding: 11px 13px; min-height: 46px;
+  }
+  textarea { min-height: 140px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: 3px solid rgba(168, 98, 42, 0.35); border-color: var(--teak); }
+  .hint { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
+  .note { font-size: 14px; color: var(--muted); margin: 0; }
+
+  footer { background: var(--navy); color: var(--sail); padding: 48px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+  footer img { height: 40px; width: auto; display: block; }
+  footer a { color: var(--sail); }
+  footer p { margin: 0; font-size: 14px; color: #C9CED6; }
+
+  @media (max-width: 860px) {
+    .hero .wrap, .inquire .wrap { grid-template-columns: minmax(0, 1fr); }
+    .hero { padding: 56px 0 48px; }
+    .hero .seal { max-width: 220px; grid-row: 1; }
+    .grid, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 540px) {
+    .grid, .steps, form { grid-template-columns: minmax(0, 1fr); }
+    header.top img { height: 48px; }
+    header.top .btn { padding: 10px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="/" aria-label="Brightwork Custom Co. home"><img src="assets/wordmark.svg" alt="Brightwork Custom Co."></a>
+    <a class="btn" href="#inquire">Start an inquiry</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Designed with you · Made to order</p>
+        <h1>Custom engraved awards, signage and keepsakes.</h1>
+        <p class="lede">Brightwork Custom Co. makes one-of-a-kind pieces for weddings, events, schools and teams: engraved, cut, printed and lit by hand. Every design is proofed with you before anything is made.</p>
+        <a class="btn" href="#inquire">Tell us about your project</a>
+      </div>
+      <img class="seal" src="assets/seal.svg" alt="">
+    </div>
+  </div>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <p class="eyebrow">What we make</p>
+      <h2 id="work-h">Pieces built for the moment, and kept long after.</h2>
+      <div class="grid">
+        <div class="card">
+          <svg class="glint" viewBox="-20 -20 40 40" aria-hidden="true"><path fill="#A8622A" d="M0,-20 C2,-4 4,-2 20,0 C4,2 2,4 0,20 C-2,4 -4,2 -20,0 C-4,-2 -2,-4 0,-20Z"/></svg>
+          <h3>Awards</h3>
+          <p>End-of-year, team and recognition awards cut to your logo and engraved with each name.</p>
+        </div>
+        <div class="card">
+          <svg class="glint" viewBox="-20 -20 40 40" aria-hidden="true"><path fill="#A8622A" d="M0,-20 C2,-4 4,-2 20,0 C4,2 2,4 0,20 C-2,4 -4,2 -20,0 C-4,-2 -2,-4 0,-20Z"/></svg>
+          <h3>Wedding signage</h3>
+          <p>Welcome signs, table numbers, menus and seating displays to match your day.</p>
+        </div>
+        <div class="card">
+          <svg class="glint" viewBox="-20 -20 40 40" aria-hidden="true"><path fill="#A8622A" d="M0,-20 C2,-4 4,-2 20,0 C4,2 2,4 0,20 C-2,4 -4,2 -20,0 C-4,-2 -2,-4 0,-20Z"/></svg>
+          <h3>Event signage</h3>
+          <p>Banquet menus, donation signs and table markers for schools, teams and organizations.</p>
+        </div>
+        <div class="card">
+          <svg class="glint" viewBox="-20 -20 40 40" aria-hidden="true"><path fill="#A8622A" d="M0,-20 C2,-4 4,-2 20,0 C4,2 2,4 0,20 C-2,4 -4,2 -20,0 C-4,-2 -2,-4 0,-20Z"/></svg>
+          <h3>Lit keepsakes</h3>
+          <p>Engraved pieces with built-in LED light, made as gifts and mementos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-h">From idea to finished piece in four steps.</h2>
+      <ol class="steps">
+        <li><h3>Tell us</h3><p>Share your event, quantities, colors and any logos or names.</p></li>
+        <li><h3>Get a quote</h3><p>You receive a price and timeline for your project.</p></li>
+        <li><h3>Approve a proof</h3><p>We send a design proof. Nothing is made until you approve it.</p></li>
+        <li><h3>We make it</h3><p>Your pieces are made to order and shipped or delivered.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="inquire" class="inquire" aria-labelledby="inq-h">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Inquiries</p>
+        <h2 id="inq-h">Start your project.</h2>
+        <p class="side">Tell us a little about what you have in mind and we'll reply with ideas, a quote and a timeline.</p>
+        <p class="side">Prefer email? Write to <a href="mailto:hello@brightworkcustomco.com">hello@brightworkcustomco.com</a>.</p>
+        <p class="note">Bulk and event orders welcome.</p>
+      </div>
+
+      <!-- Replace YOUR_FORM_ID with the ID Formspree gives you (formspree.io, free plan). -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="type">Project type</label>
+          <select id="type" name="project_type" required>
+            <option value="">Choose one</option>
+            <option>Wedding</option>
+            <option>School or team awards</option>
+            <option>Event signage</option>
+            <option>Gift or keepsake</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div>
+          <label for="date">Event or need-by date</label>
+          <input id="date" name="date" type="date">
+        </div>
+        <div class="full">
+          <label for="qty">Roughly how many pieces?</label>
+          <input id="qty" name="quantity" inputmode="numeric" placeholder="For example, 12 table numbers and a welcome sign">
+        </div>
+        <div class="full">
+          <label for="details">Tell us about it</label>
+          <textarea id="details" name="details" required placeholder="Names, colors, logos, sizes, ideas you've seen..."></textarea>
+          <p class="hint">Have a logo or invitation to share? Mention it here and we'll ask for the file by email.</p>
+        </div>
+        <input type="hidden" name="referred_by" id="ref">
+        <input type="hidden" name="_subject" value="New Brightwork inquiry">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="full">
+          <button class="btn" type="submit">Send inquiry</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/wordmark-cream.svg" alt="Brightwork Custom Co.">
+    <p><a href="mailto:hello@brightworkcustomco.com">hello@brightworkcustomco.com</a></p>
+    <p>&copy; <span id="yr">2026</span> Brightwork Custom Co.</p>
+  </div>
+</footer>
+
+<script>
+  // Carry a referral tag (e.g. from /bilbo) into the form so you can see who sent the inquiry.
+  (function () {
+    var ref = new URLSearchParams(location.search).get('ref');
+    try {
+      if (ref) localStorage.setItem('bw_ref', ref);
+      else ref = localStorage.getItem('bw_ref');
+    } catch (e) {}
+    if (ref) document.getElementById('ref').value = ref;
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
